@@ -157,7 +157,7 @@ namespace BaseWindow
 
         #region Helpers
 
-        public static object GetFileFolderName(string path)
+        public static string GetFileFolderName(string path)
         {
             // if no path return empty string
             if (string.IsNullOrEmpty(path))
