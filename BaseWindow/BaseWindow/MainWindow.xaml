@@ -11,7 +11,8 @@
         Icon="Images/Logo/icon.ico"
         WindowStyle="None"
         mc:Ignorable="d">
-    <Grid>
-        <TextBlock />
-    </Grid>
+    <StackPanel>
+        <TextBox FontSize="40" Text="Test font." />
+        <Label Content="Test font." FontSize="40" />
+    </StackPanel>
 </Window>
