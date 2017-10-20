@@ -120,7 +120,7 @@
     </WindowChrome.WindowChrome>
 
     <Grid Background="{StaticResource ForegroundLightBrush}">
-        <Frame />
+        <Frame x:Name="MainFrame" Content="{Binding CurrentPage}" />
     </Grid>
 
 </Window>

@@ -115,6 +115,11 @@ namespace BaseWindow.ViewModels
         /// </summary>
         public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
 
+        /// <summary>
+        /// Current page of the application
+        /// </summary>
+        public ApplicationPage CurrenPage { get; set; } = ApplicationPage.Login;
+
         #endregion
 
         #region Commands
