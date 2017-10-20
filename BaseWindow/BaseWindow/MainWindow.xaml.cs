@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using BaseWindow.ViewModels;
 
 namespace BaseWindow
 {
@@ -12,6 +13,8 @@ namespace BaseWindow
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new WindowViewModel(this);
         }
 
         #endregion

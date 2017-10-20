@@ -4,7 +4,6 @@ using PropertyChanged;
 
 namespace BaseWindow
 {
-    //[AddINotifyPropertyChangedInterface]
     public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
