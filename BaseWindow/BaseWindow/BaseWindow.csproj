@@ -70,6 +70,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DirectoryFW\Data\DirectoryItem.cs" />
+    <Compile Include="DirectoryFW\Data\DirectoryItemType.cs" />
+    <Compile Include="DirectoryFW\DirectoryStructure.cs" />
     <Compile Include="HeaderToImageConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

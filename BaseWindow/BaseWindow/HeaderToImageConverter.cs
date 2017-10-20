@@ -3,6 +3,7 @@ using System.Globalization;
 using System.IO;
 using System.Windows.Data;
 using System.Windows.Media.Imaging;
+using BaseWindow.DirectoryFW;
 
 namespace BaseWindow
 {
@@ -24,7 +25,7 @@ namespace BaseWindow
                 return null;
 
             // Get the name of the file/folder
-            var name = MainWindow.GetFileFolderName(path);
+            var name = DirectoryStructure.GetFileFolderName(path);
 
             // By default, we presume an image
             var image = "Images/file.png";
