@@ -7,7 +7,9 @@
         Title="MainWindow"
         Width="600"
         Height="400"
+        AllowsTransparency="True"
         Icon="Images/Logo/icon.ico"
+        WindowStyle="None"
         mc:Ignorable="d">
     <Grid>
         <TextBlock />
