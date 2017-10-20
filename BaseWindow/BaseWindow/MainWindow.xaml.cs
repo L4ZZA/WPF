@@ -7,9 +7,13 @@ namespace BaseWindow
     /// </summary>
     public partial class MainWindow : Window
     {
+        #region Contructor
+
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        #endregion
     }
 }
