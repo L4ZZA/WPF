@@ -73,6 +73,10 @@
     <Compile Include="DirectoryFW\Data\DirectoryItem.cs" />
     <Compile Include="DirectoryFW\Data\DirectoryItemType.cs" />
     <Compile Include="DirectoryFW\DirectoryStructure.cs" />
+    <Compile Include="DirectoryFW\ViewModels\Base\BaseViewModel.cs" />
+    <Compile Include="DirectoryFW\ViewModels\DirectoryItemViewModel.cs" />
+    <Compile Include="DirectoryFW\ViewModels\Base\RelayCommand.cs" />
+    <Compile Include="DirectoryFW\ViewModels\DirectoryStructureViewModel.cs" />
     <Compile Include="HeaderToImageConverter.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -112,5 +116,6 @@
     <Resource Include="Images\folder-closed.png" />
     <Resource Include="Images\folder-opened.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
