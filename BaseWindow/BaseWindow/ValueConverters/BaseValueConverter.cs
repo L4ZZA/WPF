@@ -6,9 +6,9 @@ using System.Windows.Markup;
 namespace BaseWindow
 {
     /// <summary>
-    /// base value converters taht allows direct XAML usage
+    /// A base value converter that allows direct XAML usage
     /// </summary>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">The type of this value converter</typeparam>
     public abstract class BaseValueConverter<T> : MarkupExtension, IValueConverter
         where T : class, new()
     {

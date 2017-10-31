@@ -1,7 +1,13 @@
 ﻿namespace BaseWindow
 {
+    /// <summary>
+    /// A page of the application
+    /// </summary>
     public enum ApplicationPage
     {
-        Login = 0
+        /// <summary>
+        /// The initial login page
+        /// </summary>
+        Login = 0,
     }
 }

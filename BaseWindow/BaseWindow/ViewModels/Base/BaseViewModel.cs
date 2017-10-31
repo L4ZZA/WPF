@@ -6,11 +6,18 @@ namespace BaseWindow
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        /// <summary>
+        /// A base view model that fires Property Changed events as needed
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged = (sender, e) => { };
 
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        /// <summary>
+        /// Call this to fire a <see cref="PropertyChanged"/> event
+        /// </summary>
+        /// <param name="name"></param>
+        public void OnPropertyChanged(string name)
         {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+            PropertyChanged(this, new PropertyChangedEventArgs(name));
         }
     }
 }
