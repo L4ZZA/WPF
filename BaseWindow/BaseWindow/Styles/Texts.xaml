@@ -24,6 +24,7 @@
 
                     <Grid>
 
+                        <!-- Original style -->
                         <Border x:Name="border" 
                                 BorderBrush="{TemplateBinding BorderBrush}" 
                                 BorderThickness="{TemplateBinding BorderThickness}"
@@ -31,7 +32,8 @@
                                 SnapsToDevicePixels="True">
                             <ScrollViewer x:Name="PART_ContentHost" Focusable="False" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden"/>
                         </Border>
-
+                        
+                        <!-- When start typing -->
                         <TextBlock IsHitTestVisible="False"
                                    Text="{TemplateBinding Tag}"
                                    x:Name="placeholder"
@@ -39,8 +41,8 @@
                                    Padding="{TemplateBinding Padding}"
                                    VerticalAlignment="Center"
                                    HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
-                                   Foreground="{StaticResource ForegroundVeryDarkBrush}"
-                        >
+                                   Foreground="{StaticResource ForegroundVeryDarkBrush}">
+                            
                             <TextBlock.Style>
                                 <Style TargetType="{x:Type TextBlock}">
                                     <Setter Property="Visibility" Value="Collapsed" />

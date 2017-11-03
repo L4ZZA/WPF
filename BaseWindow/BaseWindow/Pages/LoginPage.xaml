@@ -5,11 +5,54 @@
       xmlns:local="clr-namespace:BaseWindow"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       Title="LoginPage"
-      d:DesignHeight="300"
-      d:DesignWidth="300"
+      d:DesignHeight="700"
+      d:DesignWidth="700"
       mc:Ignorable="d">
 
-    <Grid>
-        <Button Content="Test"/>
-    </Grid>
+    <Border Background="{StaticResource WordBlueBrush}">
+        <Grid>
+            <Grid.Background>
+                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" Viewport="0 0 500 500" ImageSource="/Images/Background/emoji-background.png"></ImageBrush>
+            </Grid.Background>
+            
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0,-4,0,4">
+                <StackPanel
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    >
+                    
+                    <Border 
+                        Background="{StaticResource ForegroundLightBrush}"
+                        CornerRadius="10"
+                        Padding="15 50 15 15"
+                        Width="330"
+                        Margin="50 50 50 0">
+                        
+                        <StackPanel>
+                            <TextBlock Text="Sign Up" 
+                                       TextAlignment="Center"
+                                       FontSize="{StaticResource FontSizeLarge}"
+                                       FontFamily="{StaticResource LatoRegular}"
+                                       Foreground="{StaticResource WordBlueBrush}"/>
+
+                            <TextBlock Text="It's about to get fun" 
+                                       TextAlignment="Center"
+                                       FontSize="{StaticResource FontSizeRegular}"
+                                       Foreground="{StaticResource ForegroundDarkBrush}"/>
+
+                            <TextBox Tag="Email"/>
+                            <TextBox Tag="Password"/>
+                            <Button Content="Next" HorizontalAlignment="Center"/>
+                            
+                        </StackPanel>
+                    </Border>
+
+                    <Button Style="{StaticResource TextButton}" 
+                            Content="I already have an account." 
+                            HorizontalAlignment="Center"/>
+                    
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Border>
 </Page>
