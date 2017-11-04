@@ -35,14 +35,14 @@ namespace BaseWindow
         /// The attached property for this class
         /// </summary>
         public static readonly DependencyProperty ValueProperty = 
-            DependencyProperty.RegisterAttached("Value",typeof(bool),typeof(BaseAttachedProperty<Parent, Property>), new PropertyMetadata(new PropertyChangedCallback(ValuePropertyChanged)));
+            DependencyProperty.RegisterAttached("Value",typeof(bool),typeof(BaseAttachedProperty<Parent, Property>), new PropertyMetadata(OnValuePropertyChanged));
 
         /// <summary>
         /// The callback event when the <see cref="ValueProperty"/> is changed
         /// </summary>
         /// <param name="d">The UI element that had it's property changed</param>
         /// <param name="e">The arguments for the event</param>
-        private static void ValuePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        private static void OnValuePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             // Call the parent funcion
             Instance.OnValueChanged(d, e);
@@ -56,14 +56,14 @@ namespace BaseWindow
         /// </summary>
         /// <param name="d">The element to get the property from</param>
         /// <returns></returns>
-        private static Property GetValue(DependencyObject d) => (Property) d.GetValue(ValueProperty);
+        public static Property GetValue(DependencyObject d) => (Property) d.GetValue(ValueProperty);
 
         /// <summary>
         /// Sets the attached property
         /// </summary>
         /// <param name="d">The element to get the property from</param>
         /// <param name="value">The value to set the property to</param>
-        private static void SetValue(DependencyObject d, Property value) => d.SetValue(ValueProperty, value);
+        public static void SetValue(DependencyObject d, Property value) => d.SetValue(ValueProperty, value);
 
         #endregion
 
