@@ -1,4 +1,4 @@
-﻿namespace BaseWindow.Animations
+﻿namespace BaseWindow
 {
     /// <summary>
     /// 
