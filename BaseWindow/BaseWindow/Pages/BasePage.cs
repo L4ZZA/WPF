@@ -65,7 +65,7 @@ namespace BaseWindow
         }
 
         /// <summary>
-        /// 
+        /// Animates the page In
         /// </summary>
         /// <returns></returns>
         public async Task AnimateIn()
@@ -79,6 +79,26 @@ namespace BaseWindow
 
                     // Start animation
                     await this.SlideAndFadeInFromRightAsync(SlideSeconds);
+
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Animates the page out
+        /// </summary>
+        /// <returns></returns>
+        public async Task AnimateOut()
+        {
+            if (this.PageUnloadAnimation == PageAnimation.None)
+                return;
+
+            switch (PageUnloadAnimation)
+            {
+                case PageAnimation.SlideAndFadeOutToLeft:
+
+                    // Start animation
+                    await this.SlideAndFadeOutToLeftAsync(SlideSeconds);
 
                     break;
             }

@@ -45,13 +45,15 @@
 
                             <TextBox Tag="Email"/>
                             <PasswordBox Tag="Password" Margin="0 0 0 38"/>
-                            <Button Content="Next" HorizontalAlignment="Center"/>
+                            <Button Content="Next" 
+                                    Click="Button_OnClick"
+                                    HorizontalAlignment="Center"/>
 
                         </StackPanel>
 
                     </Border>
 
-                    <Button Style="{StaticResource TextButton}" 
+                    <Button Style="{StaticResource TextButton}"
                             Content="Or, create a free account..." 
                             HorizontalAlignment="Center" />
 
