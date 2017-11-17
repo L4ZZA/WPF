@@ -8,10 +8,20 @@ namespace BaseWindow
     /// <summary>
     /// A base page for all pages to gain base functionalities
     /// </summary>
-    public class BasePage : Page
+    public class BasePage<VM> : Page
+        where VM : BaseViewModel, new()
     {
+        #region Private Fields
+
+        /// <summary>
+        /// The view model associated with this page
+        /// </summary>
+        private VM mViewModel;
+
+        #endregion 
+
         #region Public Properties
-        
+
         /// <summary>
         /// The animation that plays when the page is first Loaded
         /// </summary>
@@ -26,6 +36,26 @@ namespace BaseWindow
         /// Time the slide anymation takes to complete
         /// </summary>
         public float SlideSeconds { get; set; } = 0.8f;
+
+        /// <summary>
+        /// The view model associated with this page
+        /// </summary>
+        public VM ViewModel
+        {
+            get { return mViewModel; }
+            set
+            {
+                // If nothing has changed don't do anything
+                if (mViewModel == value)
+                    return;
+
+                // update the value
+                mViewModel = value;
+
+                // Update the current data context
+                DataContext = mViewModel;
+            }
+        }
 
         #endregion
 
@@ -46,6 +76,8 @@ namespace BaseWindow
 
             // Listen out for the page loading
             Loaded += BasePage_LoadedAsync;
+
+            this.ViewModel = new VM();
         }
 
         #endregion
