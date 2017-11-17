@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:BaseWindow"
       xmlns:viewModels="clr-namespace:BaseWindow.ViewModels"
       Title="LoginPage"
+      x:Name="Page"
       d:DesignHeight="700"
       d:DesignWidth="700"
       mc:Ignorable="d">
@@ -50,7 +51,7 @@
                                          Margin="0 0 0 38"/>
                             <Button Content="Next" 
                                     Command="{Binding LoginCommand}"
-                                    CommandParameter="{Binding SecurePassword, ElementName=PasswordText}"
+                                    CommandParameter="{Binding ElementName=Page}"
                                     HorizontalAlignment="Center"/>
 
                         </StackPanel>

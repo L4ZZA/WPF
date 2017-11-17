@@ -89,6 +89,7 @@
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
     <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="ViewModels\Base\IHavePassword.cs" />
     <Compile Include="ViewModels\Base\RelayParameterizedCommand.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />

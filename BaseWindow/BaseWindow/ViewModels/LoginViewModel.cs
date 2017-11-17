@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using BaseWindow.Security;
 
 namespace BaseWindow.ViewModels
 {
@@ -54,6 +55,8 @@ namespace BaseWindow.ViewModels
         public async Task Login(object parameter)
         {
             await Task.Delay(500);
+
+            var pass =(parameter as IHavePassword).SecurePassword.Unsecure();
         }
     }
 }
