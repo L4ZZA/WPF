@@ -7,6 +7,7 @@
         <!--  Order is important  -->
         <ResourceDictionary Source="Colors.xaml" />
         <ResourceDictionary Source="Fonts.xaml" />
+        <ResourceDictionary Source="Texts.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!-- Hoverless button -->
@@ -108,8 +109,7 @@
                                        Margin="{TemplateBinding Padding}" 
                                        SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                            <TextBlock Text="&#xf110;"
-                                       FontFamily="{StaticResource FontAwesome}"
+                            <TextBlock Style="{StaticResource SpinningText}"
                                        Visibility="{TemplateBinding local:IsBusyProperty.Value, Converter={local:BooleanToVisibilityConverter}, ConverterParameter=True}"
                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>

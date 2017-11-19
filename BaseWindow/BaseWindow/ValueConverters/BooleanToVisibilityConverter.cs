@@ -10,10 +10,8 @@ namespace BaseWindow
         {
             if (parameter == null)
                 return (bool)value ? Visibility.Hidden : Visibility.Visible;
-            else
-            {
-                return (bool)value ? Visibility.Visible : Visibility.Hidden;
-            }
+
+            return (bool)value ? Visibility.Visible : Visibility.Hidden;
         }
 
         public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

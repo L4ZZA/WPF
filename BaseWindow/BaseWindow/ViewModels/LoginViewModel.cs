@@ -65,6 +65,8 @@ namespace BaseWindow.ViewModels
                 await Task.Delay(500);
 
                 var email = this.Email;
+
+                // IMPORTANT: Never store secure password in variables (like this)
                 var pass = (parameter as IHavePassword).SecurePassword.Unsecure();
             });
         }
