@@ -45,11 +45,12 @@
                                        Margin="0 0 0 20" />
 
 
-                            <TextBox Tag="Email"/>
+                            <TextBox Text="{Binding Email}" Tag="Email"/>
                             <PasswordBox x:Name="PasswordText" 
                                          Tag="Password" 
                                          Margin="0 0 0 38"/>
-                            <Button Content="Next" 
+                            <Button Content="Login" 
+                                    local:IsBusyProperty.Value="{Binding LoginIsRunning}"
                                     Command="{Binding LoginCommand}"
                                     CommandParameter="{Binding ElementName=Page}"
                                     HorizontalAlignment="Center"/>

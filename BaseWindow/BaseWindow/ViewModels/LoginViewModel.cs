@@ -24,6 +24,11 @@ namespace BaseWindow.ViewModels
         /// </summary>
         public string Email { get; set; }
 
+        /// <summary>
+        /// A flag indicating if the login commad is running
+        /// </summary>
+        public bool LoginIsRunning { get; set; }
+
         #endregion
 
         #region Commands
@@ -54,9 +59,14 @@ namespace BaseWindow.ViewModels
         /// <returns></returns>
         public async Task Login(object parameter)
         {
-            await Task.Delay(500);
+            await RunCommand(() => this.LoginIsRunning, async () =>
+            {
 
-            var pass =(parameter as IHavePassword).SecurePassword.Unsecure();
+                await Task.Delay(500);
+
+                var email = this.Email;
+                var pass = (parameter as IHavePassword).SecurePassword.Unsecure();
+            });
         }
     }
 }
