@@ -79,15 +79,21 @@
     <Compile Include="Animations\PageAnimations.cs" />
     <Compile Include="Animations\StoryboardHelpers.cs" />
     <Compile Include="AttachedProperties\BaseAttachedProperty.cs" />
+    <Compile Include="AttachedProperties\ButtonAttachedProperties.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
+    <Compile Include="Expressions\ExpressionHelpers.cs" />
     <Compile Include="Models\ApplicationPage.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Security\SecureStringHelpers.cs" />
     <Compile Include="ValueConverters\ApplicationPageValueConverter.cs" />
     <Compile Include="ValueConverters\BaseValueConverter.cs" />
     <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="ViewModels\Base\IHavePassword.cs" />
+    <Compile Include="ViewModels\Base\RelayParameterizedCommand.cs" />
+    <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="Window\WindowResizer.cs" />
     <Page Include="Pages\LoginPage.xaml">
@@ -165,6 +171,7 @@
     <Resource Include="Fonts\Lato-SemiboldItalic.ttf" />
     <Resource Include="Fonts\Lato-Thin.ttf" />
     <Resource Include="Fonts\Lato-ThinItalic.ttf" />
+    <Resource Include="Fonts\fontawesome-webfont.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
