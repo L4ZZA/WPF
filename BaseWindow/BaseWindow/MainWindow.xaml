@@ -158,45 +158,10 @@
                 Grid.Column="1"
                 Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" />
 
-            <!--  Main contacts Background  -->
-            <Border Background="{StaticResource ForegroundLightBrush}">
+            <!--Side menu-->
+            <local:SideMenuControl Grid.Column="0">
 
-                <!--  Content  -->
-                <Grid>
-
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-
-                    <!--  Chat Top Menu  -->
-                    <Grid Height="50" Background="{StaticResource WordBlueBrush}">
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-
-                        <!--  Main buttons  -->
-                        <StackPanel Orientation="Horizontal">
-                            <Button Content="{StaticResource FontAwesomeChatIcon}" Style="{StaticResource IconButton}" />
-                            <Button Content="{StaticResource FontAwesomeUserIcon}" Style="{StaticResource IconButton}" />
-                            <Button Content="{StaticResource FontAwesomePictureIcon}" Style="{StaticResource IconButton}" />
-                        </StackPanel>
-
-                        <!--  Cog  -->
-                        <Button
-                            Grid.Column="2"
-                            Content="{StaticResource FontAwesomeCogIcon}"
-                            Foreground="{StaticResource WordDarkBlueBrush}"
-                            Style="{StaticResource IconButton}" />
-
-                    </Grid>
-
-                </Grid>
-
-            </Border>
+            </local:SideMenuControl>
         </Grid>
     </Border>
 </Window>
