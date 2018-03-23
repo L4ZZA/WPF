@@ -2,6 +2,7 @@
     x:Class="BaseWindow.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:chat="clr-namespace:BaseWindow.Controls.Chat"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:BaseWindow"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -158,8 +159,10 @@
                 Grid.Column="1"
                 Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" />
 
-            <!--Side menu-->
+            <!--  Side menu  -->
             <local:SideMenuControl Grid.Column="0">
+
+                <chat:ChatListItemControl Height="60" VerticalAlignment="Top" />
 
             </local:SideMenuControl>
         </Grid>

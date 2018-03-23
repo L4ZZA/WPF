@@ -83,6 +83,12 @@
     <Compile Include="AttachedProperties\BaseAttachedProperty.cs" />
     <Compile Include="AttachedProperties\ButtonAttachedProperties.cs" />
     <Compile Include="AttachedProperties\PasswordBoxAttachedProperties.cs" />
+    <Compile Include="Controls\Chat\ChatListControl.xaml.cs">
+      <DependentUpon>ChatListControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Chat\ChatListItemControl.xaml.cs">
+      <DependentUpon>ChatListItemControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Controls\SideMenuControl.xaml.cs">
       <DependentUpon>SideMenuControl.xaml</DependentUpon>
     </Compile>
@@ -101,9 +107,19 @@
     <Compile Include="ValueConverters\BooleanToVisibilityConverter.cs" />
     <Compile Include="ViewModels\Base\IHavePassword.cs" />
     <Compile Include="ViewModels\Base\RelayParameterizedCommand.cs" />
+    <Compile Include="ViewModels\Chat\ChatListItemViewModel.cs" />
+    <Compile Include="ViewModels\Chat\Design\ChatListItemDesignModel.cs" />
     <Compile Include="ViewModels\LoginViewModel.cs" />
     <Compile Include="ViewModels\WindowViewModel.cs" />
     <Compile Include="Window\WindowResizer.cs" />
+    <Page Include="Controls\Chat\ChatListControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Chat\ChatListItemControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Controls\SideMenuControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -208,6 +224,7 @@
   <ItemGroup>
     <Resource Include="Images\Background\emoji-background.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Fody.2.0.0\build\netstandard1.4\Fody.targets" Condition="Exists('..\packages\Fody.2.0.0\build\netstandard1.4\Fody.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

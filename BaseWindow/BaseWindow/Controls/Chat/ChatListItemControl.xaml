@@ -3,8 +3,10 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:design="clr-namespace:BaseWindow.ViewModels.Chat.Design"
     xmlns:local="clr-namespace:BaseWindow.Controls.Chat"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DataContext="{x:Static design:ChatListItemDesignModel.Instance}"
     d:DesignHeight="60"
     d:DesignWidth="300"
     mc:Ignorable="d">
@@ -35,7 +37,7 @@
                     FontFamily="{StaticResource LatoRegular}"
                     FontSize="{StaticResource FontSizeAverage}"
                     Foreground="{StaticResource ForegroundLightBrush}"
-                    Text="LM" />
+                    Text="{Binding Initials}" />
             </Border>
         </Border>
 
@@ -46,14 +48,14 @@
                 <TextBlock
                     FontFamily="{StaticResource LatoRegular}"
                     Foreground="{StaticResource WordBlueBrush}"
-                    Text="Luke"
+                    Text="{Binding Name}"
                     TextTrimming="CharacterEllipsis" />
 
                 <!--  Message  -->
                 <TextBlock
                     FontFamily="{StaticResource LatoRegular}"
                     Foreground="{StaticResource WordBlueBrush}"
-                    Text="This new chat app is awesome! I bet it will be fasst too"
+                    Text="{Binding Message}"
                     TextTrimming="CharacterEllipsis" />
             </StackPanel>
         </Border>
